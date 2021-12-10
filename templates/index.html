@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Microsub / OPML Conversion Tool</title>
+        
+        <link rel="stylesheet" href="/static/styles.css">
+    
+        <link rel="icon" href="/favicon.ico" />
+    
+        <link rel="apple-touch-icon-precomposed" href="/favicon.ico">
+    
+        <link rel="webmention" href="https://webmention.jamesg.blog/endpoint" />
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+        <meta name="twitter:card" content="summary">
+    </head>
+    <body>
+        <section>
+            <h1>Microsub and OPML Conversion Tool 💻</h1>
+            <p>This web page lets you turn an OPML file into subscriptions in your Microsub reader.</p>
+            <p>To use this service, you must provide an authentication token from an IndieAuth server that has access to your feeds.</p>
+            <p>This access token will only be used to export feeds and is not saved or logged.</p>
+            <p>The source code for this project is available on <a href="https://github.com/capjamesg/microsub-opml-utis">GitHub</a>.</p>
+        </section>
+        <section>
+            <h2>Export Microsub Feeds to OPML</h2>
+            <p>The form below will turn your Microsub feed subscriptions into an OPML file. You can use this OPML file to upload your subscriptions to another feed reader.</p>
+            <p>You can only export subscriptions from one channel at a time.</p>
+            <form action="/export" method="POST">
+                <label for="url">Microsub URL:</label><br>
+                <input type="url" name="microsub_url" placeholder="https://microsub.jamesg.blog/endpoint" required><br>
+                <label for="access_token">Authentication Token:</label><br>
+                <input type="text" name="access_token" required><br>
+                <label for="channel">Channel ID from which you want to export subscriptions:</label><br>
+                <input type="text" name="channel" placeholder="indieweb123" required><br>
+                <input type="submit" value="Export Feeds 💾">
+            </form>
+        </section>
+        <!-- <section>
+            <h2>Import OPML File to Microsub</h2>
+            <p>The form below will create Microsub subscriptions for all feeds in an OPML file.</p>
+            <p>You can only import subscriptions into one channel at a time.</p>
+            <form action="/import" method="POST">
+                <label for="url">Microsub URL:</label><br>
+                <input type="url" name="microsub_url" placeholder="https://microsub.jamesg.blog/endpoint" required><br>
+                <label for="access_token">Authentication Token:</label><br>
+                <input type="text" name="access_token" required><br>
+                <label for="channel">Channel ID to which you want to add your subscriptions:</label><br>
+                <input type="text" name="channel" placeholder="indieweb123" required><br>
+                <label for="opml">OPML File:</label><br>
+                <textarea name="opml_text" rows="10" cols="50"></textarea><br>
+                <input type="submit" value="Import Feeds">
+            </form>
+        </section> -->
+    </body>
+</html>

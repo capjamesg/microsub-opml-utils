@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>James' Coffee Blog Planet</title>
+
+        <link href="mailto:jamesgjamesg.blog" rel="me">
+        
+        <link rel="stylesheet" href="/static/styles.css">
+    
+        <link rel="icon" href="/favicon.ico" />
+    
+        <link rel="apple-touch-icon-precomposed" href="/favicon.ico">
+    
+        <link rel="webmention" href="https://webmention.jamesg.blog/endpoint" />
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+        <meta name="twitter:card" content="summary">
+    </head>
+    <body>
+        <section>
+            <% if @error_type == 404 %>
+                <h1>Page not found</h1>
+                <p>The page you requested could not be found.</p>
+                <p><a href="/">Click here to go to the site home page.</a></p>
+            <% else %>
+                <h1>Error</h1>
+                <p>An error has occurred.</p>
+                <p><a href="/">Click here to go to the site home page.</a></p>
+            <% end %>
+        </section>
+    </body>
+</html>

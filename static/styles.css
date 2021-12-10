@@ -1,0 +1,87 @@
+html {
+    background-color: #FFEFD5;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: large;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+}
+section {
+    border: 1px solid lightgrey;
+}
+img, video, audio {
+    max-width: 100%;
+}
+p {
+    line-height: 1.5em;
+}
+h1, h2 {
+    border-bottom: 3px dashed hotpink;
+    display: inline-block;
+    color: royalblue;
+}
+li {
+    padding-bottom: 5px;
+    border-bottom: 2px solid lightgrey;
+}
+.explore li {
+    border-bottom: 0;
+}
+.explore ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+li:last-child {
+    border-bottom: none;
+}
+a:focus {
+    background-color: #006BD6;
+    color: white;
+    outline: lightblue 2px;
+    border-bottom: 2px dotted black;
+}
+a:hover {
+    color: #0000CD;
+}
+input[type="text"],
+input[type="url"],
+input[type="number"],
+input[type="submit"],
+textarea {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    font-size: 1.0625rem;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: royalblue;
+    color: white;
+    display: inline;
+    border: none;
+    text-align: center;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus, input[type="text"]:focus, input[type="username"]:focus, input[type="password"]:focus {
+    outline: 3px solid royalblue;
+}
+
+button:focus {
+    background-color: yellow;
+    color: black;
+    outline: 3px royalblue solid;
+}
